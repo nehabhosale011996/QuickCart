@@ -476,6 +476,10 @@ ol {
 	color: #7fad39;
 }
 
+.activecategory {
+	font-weight: 700 !important;
+}
+
 .header__menu ul li:hover .header__menu__dropdown {
 	top: 30px;
 	opacity: 1;
