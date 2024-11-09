@@ -25,7 +25,7 @@ function searchProduct() {
         
         // Redirect to the product page
         setTimeout(() => {
-            window.location.assign("http://localhost:5500/shop-details.html");
+            window.location.assign("/shop-details.html");
         }, 10); 
     } else {
         alert("Product not found.");
