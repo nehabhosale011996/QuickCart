@@ -25,7 +25,7 @@ function searchProduct() {
         
         // Redirect to the product page
         setTimeout(() => {
-            window.location.assign("/shop-details.html");
+            window.location.assign("/QuickCart/shop-details.html");
         }, 10); 
     } else {
         alert("Product not found.");
