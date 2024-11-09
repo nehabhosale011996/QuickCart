@@ -131,8 +131,8 @@
                                     All Categories
                                     <span class="arrow_carrot-down"></span>
                                 </div>
-                                <input type="text" placeholder="What do you need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
+                                <input type="text" id="search-input" placeholder="What do you need?">
+                                <button type="submit" onclick="searchProduct()" class="site-btn">SEARCH</button>
                             </form>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large"
+                            <img class="product__details__pic__item--large" id="product-image"
                                 src="img/product/details/product-details-1.jpg" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3>Smart Watch Fitness Tracker with 24/7 Heart Rate</h3>
+                        <h3 id="product-name"></h3>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -196,11 +196,8 @@
                             <i class="fa fa-star-half-o"></i>
                             <span>(18 reviews)</span>
                         </div>
-                        <div class="product__details__price">$50.00</div>
-                        <p>The unique curved 1.47-inch ultra-HD full touch screen of this fitness tracker offers you superb visual and operational experience. 
-                            Immerse yourself in crystal-clear visuals, providing an intuitive and responsive interface that keeps you in control of your fitness metrics and settings. 
-                            Express your unique style every day with over 150 watch faces in the App or your favorite photo in your phone album, 
-                            keep your wrist as dynamic as your lifestyle.</p>
+                        <div class="product__details__price" id="product-price"></div>
+                        <p id="product-description"></p>
                         <div class="product__details__quantity">
                             <div class="quantity">
                                 <div class="pro-qty">
@@ -405,7 +402,12 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/searchProducts.js"></script>
 
+    <script>
+        // Call the function to display product details on page load
+        displayProductDetails();
+    </script>
 
 </body>
 
