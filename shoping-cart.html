@@ -34,12 +34,12 @@
      <div class="humberger__menu__overlay"></div>
      <div class="humberger__menu__wrapper">
          <div class="humberger__menu__logo">
-             <a href="#"><img src="img/logo.png" height="80" width="100"></a>
+             <a href="#"><img src="img/logo.png" height="50" width="150"></a>
          </div>
          <div class="humberger__menu__cart">
              <ul>
                  <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                 <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                 <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span></span></a></li>
              </ul>
          </div>
          <div class="humberger__menu__widget">
@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" height="80" width="100" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" height="50" width="150" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -84,9 +84,9 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span id="cart-count"></span></a></li>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="login.html" id="login-btn"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </ul>
                     </div>
@@ -178,7 +178,7 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="cart-items">
                                 <tr>
                                     <td class="shoping__cart__item">
                                         <img src="img/cart/cart-1.jpg" alt="">
@@ -273,10 +273,10 @@
                     <div class="shoping__checkout">
                         <h5>Cart Total</h5>
                         <ul>
-                            <li>Subtotal <span>$454.98</span></li>
-                            <li>Total <span>$454.98</span></li>
+                            <li>Subtotal <span id="subtotal-price"></span></li>
+                            <li>Total <span id="total-price"></span></li>
                         </ul>
-                        <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+                        <a href="checkout.html" class="primary-btn">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>
@@ -291,7 +291,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" height="80" width="100" alt=""></a>
+                            <a href="./index.html"><img src="img/logo.png" height="50" width="150" alt=""></a>
                         </div>
                     </div>
                 </div>

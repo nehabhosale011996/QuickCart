@@ -21,6 +21,62 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        .loginContainer {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #ddd;
+        }
+        .tabs div {
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            width: 50%;
+        }
+        .tabs div.active {
+            border-bottom: 2px solid #007BFF;
+            font-weight: bold;
+        }
+        .form-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .form-container.active {
+            display: block;
+        }
+        .loginContainer input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .loginButton {
+            width: 100%;
+            padding: 10px;
+            background-color: #7fad39;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        h4 {
+            font-weight: 610;
+            color: #1c1c1c;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,15 +155,15 @@
     <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+       <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2>Contact Us</h2>
+                        <h2>Login/Register</h2>
                         <div class="breadcrumb__option">
                             <a href="./index.html">Home</a>
-                            <span>Contact Us</span>
+                            <span>Login/Register</span>
                         </div>
                     </div>
                 </div>
@@ -116,76 +172,40 @@
     </section>
     <!-- Breadcrumb Section End -->
 
-    <!-- Contact Section Begin -->
+    <!-- Login/Register Section Begin -->
     <section class="contact spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_phone"></span>
-                        <h4>Phone</h4>
-                        <p>+512-345-6789</p>
-                    </div>
+            <div class="loginContainer">
+                <div class="tabs">
+                    <div id="login-tab" class="active" onclick="showForm('login')">Login</div>
+                    <div id="register-tab" onclick="showForm('register')">Register</div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_pin_alt"></span>
-                        <h4>Address</h4>
-                        <p>Downtown San Antonio</p>
-                    </div>
+            
+                <!-- Login Form -->
+                <div id="login-form" class="form-container active">
+                    <h4>Login</h4>
+                    <form onsubmit="handleLogin(event)"">
+                        <input type="email" id="login-email" placeholder="Email" required><br>
+                        <input type="password" id="login-password" placeholder="Password" required><br>
+                        <button class="loginButton" type="submit">Login</button>
+                    </form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_clock_alt"></span>
-                        <h4>Open time</h4>
-                        <p>10:00 am to 23:00 pm</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                    <div class="contact__widget">
-                        <span class="icon_mail_alt"></span>
-                        <h4>Email</h4>
-                        <p>support@quickcart.com</p>
-                    </div>
+            
+                <!-- Register Form -->
+                <div id="register-form" class="form-container">
+                    <h4>Register</h4>
+                    <form">
+                        <input type="email" id="register-email" placeholder="Email" required><br>
+                        <input type="password" id="register-password" placeholder="Password" required><br>
+                        <input type="password" id="confirm-register-password" placeholder="Confirm Password" required><br>
+                        <button class="loginButton" type="submit" onclick="handleRegister()">Register</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
+    <!-- Login/Register Section End -->
 
-    <!-- Contact Form Begin -->
-    <div class="contact-form spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact__form__title">
-                        <h2>Get in touch with us!</h2>
-                    </div>
-                </div>
-            </div>
-            <form action="#">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Name">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Email">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Phone Number">
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Your Subject">
-                    </div>
-                    <div class="col-lg-12 text-center">
-                        <textarea placeholder="Your Message"></textarea>
-                        <button type="submit" class="site-btn">SEND MESSAGE</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Contact Form End -->
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">

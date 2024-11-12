@@ -33,12 +33,12 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" height="80" width="100"></a>
+            <a href="#"><img src="img/logo.png" height="50" width="150"></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
                 <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span></span></a></li>
             </ul>
         </div>
         <div class="humberger__menu__widget">
@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" height="80" width="100" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" height="50" width="150" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -83,9 +83,9 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span id="cart-count"></span></a></li>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="login.html" id="login-btn"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </ul>
                     </div>
@@ -245,13 +245,13 @@
                             <div class="checkout__order">
                                 <h4>Your Order</h4>
                                 <div class="checkout__order__products">Products <span>Total</span></div>
-                                <ul>
+                                <ul id="checkout-items">
                                     <li>Cascade Dishwasher <span>$110.00</span></li>
                                     <li>Samsung Monitor <span>$39.99</span></li>
                                     <li>Digital Lock for door <span>$69.99</span></li>
                                 </ul>
-                                <div class="checkout__order__subtotal">Subtotal <span>$454.98</span></div>
-                                <div class="checkout__order__total">Total <span>$454.98</span></div>
+                                <div class="checkout__order__subtotal">Subtotal <span id="subtotal-price">$454.98</span></div>
+                                <div class="checkout__order__total">Total <span id="total-price">$454.98</span></div>
                                 <div class="checkout__input__checkbox">
                                     <label for="paypal">
                                         Paypal
@@ -259,7 +259,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <button type="submit" class="site-btn">PLACE ORDER</button>
+                                <button type="submit" class="site-btn" onclick="placeOrder()">PLACE ORDER</button>
                             </div>
                         </div>
                     </div>
@@ -276,7 +276,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__about__logo">
-                        <a href="./index.html"><img src="img/logo.png" height="80" width="100" alt=""></a>
+                        <a href="./index.html"><img src="img/logo.png" height="50" width="150" alt=""></a>
                     </div>
                 </div>
             </div>
