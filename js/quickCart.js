@@ -284,3 +284,7 @@ function handleSignOut() {
 function handleRegister() {
     alert('User account has been created!')
 }
+
+function sendMessage() {
+    alert( "Your Message has been Sent!" );
+}
